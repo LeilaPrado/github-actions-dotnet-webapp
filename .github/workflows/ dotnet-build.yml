@@ -1,0 +1,17 @@
+name: .NET 
+
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Script personalizado
+        run: echo "Roda script personalizado"
+       
